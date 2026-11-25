@@ -241,7 +241,7 @@ s1.name = 'GCET'
 print(s1.name)'''
 
 
-class college:
+'''class college:
     @classmethod
     def display(cls):
         print('College Name:', cls.cname)
@@ -277,6 +277,6 @@ s2.change_name('Manjunath B')
 s2.change_phone(9876543210)
 s2.change_usn('1GC20CS004')
 s2.display()
-
+'''
 
 
