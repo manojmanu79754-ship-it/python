@@ -176,11 +176,107 @@ print(rev)'''
         print("*", end = ' ')
     print()'''
 
-for i in range(1, 6):
+'''for i in range(1, 6):
     for j in range(1, 6):
         if i == j:
             print('1', end = ' ')
         else:
             print('@', end = ' ')
-    print()
-    
+    print()'''
+
+#With arg and without return
+'''def convert(s):
+    out  = ''
+    for i in s:
+        if 'a' <= i <= 'z':
+            out += chr(ord(i) - 32)
+        else:
+            out += i
+    return out
+print(convert(input('Enter a string: ')))'''
+
+'''def convert():
+    s = input('Enter a string: ')
+    out  = ''
+    for i in s:
+        if 'a' <= i <= 'z':
+            out += chr(ord(i) - 32)
+        else:
+            out += i
+    return out
+print(convert())'''
+
+
+'''class college:
+    cname = 'GCEM'
+    cloc = 'Hoodi'
+s1 = college()
+print(s1.cname, s1.cloc)
+
+college.cname = 'GCET'
+print(s1.cname)
+print(college.cname)
+
+print('changing college location')
+s1.cloc = 'Hoodi, Bangalore'
+print(s1.cloc)
+print(college.cloc)'''
+
+
+'''class college:
+    cname = 'GCEM'
+    cloc = 'Hoodi'
+s1 = college()
+
+s1.name = 'Manoj S'
+s1.phone = 1234567890
+
+s2 = college()
+s2.name = 'Manjunath'
+s2.phone = 9876543210
+
+print(s1.name)
+print('After changing college name')
+s1.name = 'GCET'
+print(s1.name)'''
+
+
+class college:
+    @classmethod
+    def display(cls):
+        print('College Name:', cls.cname)
+        print('College Location:', cls.cloc)
+    def __init__(self, name, phone, usn):
+        self.name = name
+        self.phone = phone
+        self.usn = usn
+
+    def display(self):
+        print('Name:', self.name)
+        print('Phone:', self.phone)
+        print('USN:', self.usn)
+
+    def change_name(self, name):
+        self.name = name
+    def change_phone(self, phone):
+        self.phone = phone
+    def change_usn(self, usn):
+        self.usn = usn
+
+s1 = college('Manoj S', 1234567890, '1GC20CS001')
+s2 = college('Manjunath', 9876543210, '1GC20CS002')
+s1.display()
+s2.display()
+
+s1.change_name('Manoj')
+s1.change_phone(9786756798)
+s1.change_usn('1GC20CS003')
+s1.display()
+
+s2.change_name('Manjunath B')
+s2.change_phone(9876543210)
+s2.change_usn('1GC20CS004')
+s2.display()
+
+
+
